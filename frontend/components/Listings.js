@@ -6,7 +6,7 @@ import { ListingsContext } from '../pages/_app';
 
 const ListingsStyles = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
 `;
 
 export default function SearchesList() {
@@ -14,7 +14,7 @@ export default function SearchesList() {
   const { listings, fetchListings } = useContext(ListingsContext);
   return (
     <>
-      <p>{listings.length} Listings for review <button onClick={fetchListings}>Refresh</button></p>
+      <p>{listings.length} Listings for review <button onClick={fetchListings}>Refresh Listing</button></p>
       <ListingsStyles>
         {listings.map(listing => (
           <Listing key={listing._id} listing={listing} />

@@ -34,6 +34,7 @@ const ListingStyles = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
     margin-top: 10px;
+    cursor: pointer;
     button {
       background: #59c359;
       border: 0;
@@ -63,7 +64,7 @@ const PriceTag = styled.span`
 
 const formatter = new Intl.NumberFormat('en-CA', {
   style: 'currency',
-  currency: 'CAD',
+  currency: 'USD',
   maximumSignificantDigits: 1,
 });
 export default function Listing({ listing }) {
@@ -76,14 +77,14 @@ export default function Listing({ listing }) {
           src={`/static/${listing.from}.png`}
           alt={`Listing from ${listing.from}`}
         />
-        {formatter.format(listing.price)}
+        {listing.price}
       </PriceTag>
       <a href={listing.link} target="_blank">
-        <img width="50" src={listing.image} alt={listing.title} />
+        <img width="50" loading="lazy" src={listing.image} alt={listing.title} />
       </a>
       <div className="listing-details">
         <time dateTime={listing.date}>
-          {formatDistance(new Date(listing.date), new Date())} ago
+          {formatDistance(new Date(listing.date), new Date())} ago - {listing.city}
         </time>
         <h2>{listing.title}</h2>
         <div className="buttons">

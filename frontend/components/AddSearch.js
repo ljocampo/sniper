@@ -27,7 +27,7 @@ export default function AddSearch() {
   return (
     <form onSubmit={e => handleSubmit(e, { name, feed })}>
       <input type="text" name="name" placeholder="name" {...name} />
-      <input type="text" name="feed" placeholder="feed" {...feed} />
+      {/*<input type="text" name="feed" placeholder="feed" {...feed} />*/}
       <button type="submit">+ Add Search</button>
     </form>
   );

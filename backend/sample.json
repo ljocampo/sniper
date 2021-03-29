@@ -1,0 +1,31 @@
+{
+  "MARKETPLACE_FEED_ITEM_IMAGE_WIDTH": 246,
+  "VERTICALS_LEAD_GEN_PHOTO_HEIGHT_WIDTH": 40,
+  "MERCHANT_LOGO_SCALE": null,
+  "params": {
+    "bqf": { "callsite": "COMMERCE_MKTPLACE_WWW", "query": "bora" },
+    "browse_request_params": {
+      "filter_location_id": "lapaz",
+      "commerce_search_sort_by": "BEST_MATCH",
+      "filter_price_lower_bound": 0,
+      "filter_price_upper_bound": 214748364700
+    },
+    "custom_request_params": { "surface": "SEARCH", "search_vertical": "C2C" }
+  }
+}
+
+params: {
+    bqf: { callsite: 'COMMERCE_MKTPLACE_WWW', query },
+    browse_request_params: {
+      // burlington
+      // filter_location_id: '108043585884666',
+      // la paz
+      filter_location_id: 'lapaz',
+      filter_price_lower_bound: 0,
+      filter_price_upper_bound: 214748364700,
+    },
+    custom_request_params: {
+      surface: 'SEARCH',
+      search_vertical: 'C2C',
+    },
+  },
